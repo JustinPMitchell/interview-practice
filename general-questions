@@ -1,0 +1,80 @@
+What did you learn yesterday/this week?
+Today I learned the precise difference between let, var, and const.  Scope has been odd for js for sometime. Var was used as a convenience at first but causes some issues with scope.  Let allows for block scope meaning that it is to say if defined in a function it is just a part of that function and if defined in a for loop it is only defined in that for loop.  things get a little hairy when you have multiple programs and pages, so it is much wiser to use let for the most part.  Const should be used in place of let if a variable should not be changed.  This will limit the amount of muteable things.  Yesterday, I attempted to learn mergesort in JS.  MergeSort is a little more confusing to me than quicksort, because of the merging part.  I definitely need to rewatch some videos on this concept to get a better idea of it. I know the basics of merge is to recursively compare a set of things until you get to just comparing two things and then you merge those two in order and so on.
+
+What excites or interests you about coding?
+I have a passion for problem solving.  I really enjoy the ahhh-ha moment when you solve a problem. I also really enjoy working with others to solve problems.  I remember being in high school and really enjoying helping other students when I finished my homework.  That's what sparked my interest in teaching.  After being exposed to coding in my student's robotics program, I quickly realized that this was the line of work for me, where I can always find ahhh-ha moments.
+
+What is a recent technical challenge you experienced and how did you solve it?
+One of my favorite personal projects I have worked on was a game using the phaser library.  It was a king of the hill game where two players try to bump each other out of the ring.  The bumping part was made easy thanks to some collision methods built in phaser.  It was the detection of the arena that was the hard part for me.  I couldn't figure out how to tell the program to identify if a player was in the arena or not.  I kept imagining that I would have to use some ellipse formula, because that was the shape of the arena.  Eventually, I was able to force the solution by using the foci of the ellipse to identify the bounds of the stage.  However, it was only after that I had finished the project, a friend mentioned that I could just have calculated when the player and the arena were touching/colliding.  I felt like such a fool, but it was a good lesson in taking a step back from the problem when it gets to be too complicated and see if there is a simpler approach.
+
+When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?
+I built my portfolio using react originally and quickly learned that the components are very heavy.  I wondered if there was a way to have a simple react app that wouldn't take too long to load.  I learned about functional components and how much lighter they are.  After implementing these changes, my portfolio did load faster.  Unfortunately, I attempted to deploy to heroku and heroku just takes awhile for most loading pages.  So I switched to a standard js/css/html stack and deployed on github pages
+
+*****Can you describe some SEO best practices or techniques you have used lately?
+Some of the key techniques to Search Engine Optimization are things that should be done already.  I always make sure to have a title tag and give a good meta description.  It is also a good idea to make sure the content of the page is related to what you think users would search for.  In a group in the past, we had a UXDI team help us define what needed to be on our page to best engage users.
+
+*****Can you explain any common techniques or recent issues solved in regards to front-end security?
+In building a recent MERN app to help users build meal plans, we had to hide their passwords.  A simple solution is to put astericks as the user is putting it in by giving a password type to the input tag.  The password can be further encrypted using bcrypt and providing the user with a token so they are only logged in for as long as there token is active. 
+
+*****What actions have you personally taken on recent projects to increase maintainability of your code?
+One of the hardest issues about maintainability is API's.  If the maker of the API changes the API in any way, then it will probably change the way your project will look.  To avoid this problem, it is best practice to use API's that do not change often or using API's that are handled by large professional organizations.  Just limiting the amount of muteable things is a great idea in any assignment, going back to the reason for using const more often.  
+
+*****Talk about your preferred development environment.
+I like to rotate text editors to get a change in environment.  I use google chrome for testing with the DOM, but test with other browsers and devices when final implementations are in order.
+
+*****Which version control systems are you familiar with?
+I'm familiar with Git and GitHub.  It seems like everyone is using these now.  My favorite experience using Git is when I was working on a team with two other individuals.  It gave us the ability to work on different aspects of the same project while one person coordinated our merges and helped as needed. 
+
+Can you describe your workflow when you create a web page?
+I tend to wireframe my ideas first and then break the wireframes into components, which I think is why I enjoy react so much.  Once the wireframes are complete, I create the stubs in html and create a wireframe using css and html.  Then I add any libraries as needed and then javascript.  
+
+If you have 5 different stylesheets, how would you best integrate them into the site?
+I'd combine the five different stylesheets (assuming none of them are css libraries like bootstrap) and then rearrange them in order of the page. what's at the top of the page is at the top of the css stylesheet.  
+
+*****Can you describe the difference between progressive enhancement and graceful degradation?
+graceful degradation is making sure your website has some usefulness for people using older browsers or older versions of browsers and technologies
+progressive enhancement is looking into future browser versioning
+using a noscript tag can be helpful for graceful degredation
+
+
+*****How would you optimize a website's assets/resources?
+Minimizing Redirects is an easy thing to do to optimize a website.  For images and other static assets, it may be wise to host these seperateley.
+
+*****How many resources will a browser download from a given domain at a time?
+6 to 8, depending on your browser
+
+*****What are the exceptions?
+
+
+Name 3 ways to decrease page load (perceived or actual load time).
+If using react, use functional components for things that don't change state
+combine js files to limit http requests
+do not scale down images 
+put a progress bar for perceived
+
+If you jumped on a project and they used tabs and you used spaces, what would you do?
+use tabs
+
+Describe how you would create a simple slideshow page.
+It may vary depending on what the users need/want, but the basics would be to stub out the html make an ul with li for each slide, then make some css that sets the width and height for the container of the slides and set the images as backgrounds (for a more lightweight experience), finally add the javascript that just hides all of the slides and shows the current slide, you can then change this template to meet the needs of your users.
+
+If you could master one technology this year, what would it be?
+I would master Angular.  It seems like it is a rising framework that may comeback (hopefully no rediculous changes this time)
+
+Explain the importance of standards and standards bodies.
+When I think of web standards, I think of a uniform way to move forward with technology.  If there weren't standards, then browsers would be all over the place and it would be much more difficult to build for each browser.
+
+What is Flash of Unstyled Content? How do you avoid FOUC?
+it's when something just flashes up on the screen caused by @import in css, you can avoid FOUC by adding a link or script tag to the head instead
+
+Explain what ARIA and screenreaders are, and how to make a website accessible.
+Screenreaders refers to the technology that reads a screen for people that for some reason or another cannot read the screen (sometimes permanent blindness, sometimes temporary, I'm sure there are other reasons).  Making a website accessible is not only important to make sure everyone can have the ability to use a website the same, but there are some legal obligations as well.  An easy way to make things more accessible is just to use appropriate tag names, use alt text, and make sure you don't hide anything from the tab line.  ARIA - Accessible Rich Internet Applications
+
+Explain some of the pros and cons for CSS animations versus JavaScript animations.
+CSS is lighter than Javascript, but css can be very limiting
+CSS overhead (space in memory) is alot smaller and easier to learn
+JS can be very specialized for certian libraries, but can do much more
+CSS has pretty good performance, because it relies on the browser to do most of the computational work vs JS which is much more variable
+
+What does CORS stand for and what issue does it address?
+Cross Origin Resource Sharing - this deals with security problems.  So if one source from a different origin is trying to mingle with another source from a different origin this is a no no with same origin access, but CORS fixes this problem and removes limitations.  It provides a header for other scripts to work around this issue.

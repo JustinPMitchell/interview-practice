@@ -1,0 +1,20 @@
+
+What are some advantages/disadvantages to testing your code?
+Some of the advantages of testing your code are you find where your errors are before your users
+Good tests will really reach the edge cases that users might run into
+If you breakdown your program into pieces, you can effectively unit test and really filter your issues
+If you start testing first, you can write clearer code
+Disadvantages are it takes time
+when you refactor code, you have more confidence that the code works and have clear documentation
+test code before it's deployed
+
+
+What tools would you use to test your code's functionality?
+I have used mocha and chai to test my code so far.  Mocha is the library that allows you to do your testing and chai is the assertion library that we used to see our tests in.  My mentor recently showed me some Sellenium, so I could get a better idea of what that looks like and New Relic.  She also recommended that I look at casper.js, backstop.js, and CSS regressions.
+
+What is the difference between a unit test and a functional/integration test?
+Unit tests - tests inidividual functions or small bits of code
+Functional test - a test that makes sure the product works in the browser, also referred as E2E or end to end
+
+What is the purpose of a code style linting tool?
+Style linting is a static analysis of code to see if adheres to certain standards.  It checks your code to make sure your spaces are up to standard.  It keeps things to a certain style so that way anyone can look at it and read more clearly.
