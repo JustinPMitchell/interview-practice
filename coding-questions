@@ -1,0 +1,97 @@
+
+Question: What is the value of foo?
+
+var foo = 10 + '20';
+
+1020, adding a number and a string together, converts the number to a string
+
+Question: What will be the output of the code below?
+
+console.log(0.1 + 0.2 == 0.3);
+.1 + .2 === .30000004 which is not the same as .3
+even though == checks to see if the types are the same, if they both are numbers, then it checks to see if ===
+false
+
+you could use Math.floor or .toPrecision or abs if you wanted an integer
+
+Question: How would you make this work?
+
+add(2, 5); // 7 this one uses 2 perameters
+add(2)(5); // 7 this one uses 1 parameter and calls the function a second time with one parameter
+
+function add(num1, num2) {
+	if(num2) {
+		return num1 + num2;
+	} else {
+		return function(num3) { return num1 + num3; };
+	}
+}
+
+
+Question: What value is returned from the following statement?
+
+"i'm a lasagna hog".split("").reverse().join("");
+
+the same thing but backwards, with \'
+
+Question: What is the value of window.foo?
+
+( window.foo || ( window.foo = "bar" ) );
+
+bar as a string
+
+Question: What is the outcome of the two alerts below?
+
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+Hello World and outside is an error first one is an IIFE and the second bar is declared in the function and cant be seen
+
+Question: What is the value of foo.length?
+
+var foo = [];
+foo.push(1);
+foo.push(2);
+
+2
+
+Question: What is the value of foo.x?
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+
+foo.x is undefined, because of the left hand expression happening first even though the right hand normally goes first
+
+Question: What does the following code print?
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
+
+one three two, the console logs happen as it goes through the program and then it does the settimeout
+
+Question: What is the difference between these four promises?
+
+doSomething().then(function () {
+  return doSomethingElse();
+});
+
+// this refers to a function that executes, once it calls on a function that returns a function
+
+doSomething().then(function () {
+  doSomethingElse();
+});
+
+// this refers to a function that executes, once it's done it calls on a function that calls on another function
+
+doSomething().then(doSomethingElse());
+
+// this refers to a function that executes, once it's done, it calls on another function
+
+doSomething().then(doSomethingElse);
